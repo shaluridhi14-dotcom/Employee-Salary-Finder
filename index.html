@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Employee Salary Finder</h1>
+        <p>Find employee salary information easily</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+            <h2>Salary Overview</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Highest Salary</h3>
+                    <p id="highest-salary">Click to view</p>
+                    <button onclick="getHighestSalary()">
+                        View Employee
+                    </button>
+                </div>
+
+                <div class="card">
+                    <h3>Lowest Salary</h3>
+                    <p id="lowest-salary">Click to view</p>
+                    <button onclick="getLowestSalary()">
+                        View Employee
+                    </button>
+                </div>
+
+                <div class="card">
+                    <h3>Top 5 Employees</h3>
+                    <p>Highest paid employees</p>
+                    <button onclick="getTop5()">
+                        View Top 5
+                    </button>
+                </div>
+
+                <div class="card">
+                    <h3>Average Salary</h3>
+                    <p id="average-salary">Click to view</p>
+                    <button onclick="getAverageSalary()">
+                        View Average
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Employee Details</h2>
+            <div id="result">
+                <p>Select any option above to see results.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
