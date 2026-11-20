@@ -1,7 +1,7 @@
 const API_URL = window.location.hostname === "localhost" ||
                 window.location.hostname === "127.0.0.1"
                 ? "http://127.0.0.1:5000"
-                : "";
+                : "https://employee-salary-finder-hdd7-7k9zcuv65-shaluridhi14-dotcom.vercel.app";
 
 // 1. Highest Salary Employee
 async function getHighestSalary() {
