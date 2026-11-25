@@ -17,50 +17,157 @@
 
     <main>
 
-        <section class="dashboard">
-            <h2>Salary Overview</h2>
+        
+<section class="dashboard">
+    <h2>Salary Overview</h2>
 
-            <div class="cards">
-                <div class="card">
-                    <h3>Highest Salary</h3>
-                    <p id="highest-salary">Click to view</p>
-                    <button onclick="getHighestSalary()">
-                        View Employee
-                    </button>
-                </div>
+    <div class="cards">
 
-                <div class="card">
-                    <h3>Lowest Salary</h3>
-                    <p id="lowest-salary">Click to view</p>
-                    <button onclick="getLowestSalary()">
-                        View Employee
-                    </button>
-                </div>
+        <!-- Highest Salary -->
+        <div class="card">
+            <h3>Highest Salary</h3>
+            <p id="highest-salary">Click to view</p>
 
-                <div class="card">
-                    <h3>Top 5 Employees</h3>
-                    <p>Highest paid employees</p>
-                    <button onclick="getTop5()">
-                        View Top 5
-                    </button>
-                </div>
+            <button onclick="getHighestSalary()">
+                View Employee
+            </button>
 
-                <div class="card">
-                    <h3>Average Salary</h3>
-                    <p id="average-salary">Click to view</p>
-                    <button onclick="getAverageSalary()">
-                        View Average
-                    </button>
-                </div>
-            </div>
-        </section>
+            <div id="highest-result" class="card-result"></div>
+        </div>
 
-        <section class="results">
-            <h2>Employee Details</h2>
-            <div id="result">
-                <p>Select any option above to see results.</p>
-            </div>
-        </section>
+        <!-- Lowest Salary -->
+        <div class="card">
+            <h3>Lowest Salary</h3>
+            <p id="lowest-salary">Click to view</p>
+
+            <button onclick="getLowestSalary()">
+                View Employee
+            </button>
+
+            <div id="lowest-result" class="card-result"></div>
+        </div>
+
+        <!-- Top 5 Employees -->
+        <div class="card">
+            <h3>Top 5 Employees</h3>
+            <p>Highest paid employees</p>
+
+            <button onclick="getTop5()">
+                View Top 5
+            </button>
+
+            <div id="top5-result" class="card-result"></div>
+        </div>
+
+        <!-- Average Salary -->
+        <div class="card">
+            <h3>Average Salary</h3>
+            <p id="average-salary">Click to view</p>
+
+            <button onclick="getAverageSalary()">
+                View Average
+            </button>
+
+            <div id="average-result" class="card-result"></div>
+        </div>
+
+    </div>
+</section>
+
+<section class="add-employee">
+    <h2>Add Employee Details</h2>
+
+    <form id="addEmployeeForm">
+        <input type="number" id="emp_id"
+            placeholder="Employee ID" required>
+
+        <input type="text" id="emp_name"
+            placeholder="Employee Name" required>
+
+        <input type="text" id="department"
+            placeholder="Department" required>
+
+        <input type="number" id="salary"
+            placeholder="Salary" min="0" step="0.01" required>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <p id="addMessage"></p>
+</section>
+
+
+<section class="delete-employee">
+    <h2>Delete Employee Record</h2>
+
+    <div class="delete-box">
+        <input
+            type="number"
+            id="deleteEmpId"
+            placeholder="Enter Employee ID"
+        >
+
+        <button onclick="deleteEmployee()">
+            Delete Employee
+        </button>
+    </div>
+
+    <p id="deleteMessage"></p>
+</section>
+
+
+<section class="employee-list">
+    <h2>All Employee Records</h2>
+
+    <button onclick="getEmployees()">View Employee List</button>
+
+    <div id="employeeList"></div>
+</section>
+
+<!-- Update Employee Form -->
+<section class="update-employee">
+    <h2>Update Employee Details</h2>
+
+    <form id="updateEmployeeForm">
+        <input type="number" id="updateEmpId"
+            placeholder="Employee ID" required>
+
+        <input type="text" id="updateEmpName"
+            placeholder="Employee Name" required>
+
+        <input type="text" id="updateDepartment"
+            placeholder="Department" required>
+
+        <input type="number" id="updateSalary"
+            placeholder="Salary" min="0" step="0.01" required>
+
+        <button type="submit">Update Employee</button>
+    </form>
+
+    <p id="updateMessage"></p>
+</section>
+
+<section class="results">
+    <h2>Employee Details</h2>
+
+    <!-- Search Employee -->
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Enter Employee ID or Name"
+        >
+
+        <button onclick="searchEmployee()">
+            Search Employee
+        </button>
+    </div>
+
+    <div id="result">
+        <p>Select any option above to see results.</p>
+    </div>
+</section>
+
 
     </main>
 
